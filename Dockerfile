@@ -1,3 +1,4 @@
+# Create an Allpine impage with vault and and awscli installed
 # Use the official Alpine as a base image
 FROM alpine:latest
 
