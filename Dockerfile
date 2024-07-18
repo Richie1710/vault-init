@@ -18,7 +18,7 @@ RUN apk add --update --virtual .deps --no-cache gnupg && \
     rm -f /tmp/${PRODUCT}_${VERSION}_linux_amd64.zip ${PRODUCT}_${VERSION}_SHA256SUMS ${VERSION}/${PRODUCT}_${VERSION}_SHA256SUMS.sig && \
     apk del .deps
 # Verify installations
-RUN vault --version && aws --version
+RUN vault --version
 
 # Setze den Entry Point auf sh
 ENTRYPOINT ["/bin/sh", "-c"]
