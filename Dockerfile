@@ -3,17 +3,7 @@
 FROM alpine:latest
 
 # Install necessary packages
-RUN apk add --no-cache \
-    curl \
-    bash \
-    python3 \
-    py3-pip \
-    jq \
-    vault
-
-# Install AWS CLI
-RUN pip3 install --upgrade awscli
-
+RUN apk add --no-cache vault bash
 # Verify installations
 RUN vault --version && aws --version
 
